@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+
+<ul>
+    <li *ngFor="let animal of animals">
+        <button (click)="onSelected(animal)">{{ animal.name }}</button>
+    </li>
+</ul>
+
+<div *ngIf="selectedAnimal">
+    <animal-detail [animal]="selectedAnimal"></animal-detail>
+</div>
